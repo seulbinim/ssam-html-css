@@ -11,6 +11,21 @@ h1, h2{
   margin-block: 20px;
 }
 
+/* 카드 리스트 */
+.card-list{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
 /* 카드 아이템 */
 .card-item{
   container-type: inline-size;
