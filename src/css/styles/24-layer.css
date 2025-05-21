@@ -1,4 +1,39 @@
 /* @layer 규칙 */
+@layer module, state;
+
+@layer module {
+  body {
+    background: yellow !important;
+  }
+
+  .alert {
+    background-color: darkblue;
+    padding: 1em;
+    color: white;
+  }
+
+  p {
+    border: medium solid purple;
+  }
+}
+
+@layer state {
+  body {
+    background-color: pink !important;
+  }
+
+  .alert {
+    background-color: brown;
+    padding: 1em;
+    color: white;
+  }
+
+  p {
+    border: medium solid red;
+  }
+}
+
 body {
   margin: 50px;
+  background-color: limegreen !important;
 }
