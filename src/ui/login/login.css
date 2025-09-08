@@ -109,3 +109,26 @@ body {
 .textlink-new {
   font-weight: 700;
 }
+
+/* 스위치 */
+.switch {
+  position: relative;
+  display: inline-flex;
+
+  input {
+    position: absolute;
+    margin: 0;
+    inset: 0;
+    appearance: none;
+  }
+
+  label::after {
+    content: 'OFF';
+    color: var(--gray-200);
+  }
+
+  input:checked + label::after {
+    content: 'ON';
+    color: var(--green-100);
+  }
+}
