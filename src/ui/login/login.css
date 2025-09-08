@@ -51,35 +51,56 @@ body {
 }
 
 /* 체크박스 컴포넌트 */
-/* 체크박스 - 배경이미지 */
+/* 체크박스 - 배경 이미지 & SVG 이미지 */
 .checkbox {
   --size: 24px;
+  --gap: 4px;
+
+  position: relative;
+  display: inline-flex;
+
+  input {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    margin: 0;
+    inline-size: var(--size);
+    block-size: var(--size);
+    appearance: none;
+  }
+
+  label {
+    block-size: var(--size);
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
 
   &.bg-icon {
-    position: relative;
-    display: inline-flex;
-
-    input {
-      position: absolute;
-      inset-block-start: 0;
-      inset-inline-start: 0;
-      margin: 0;
-      inline-size: var(--size);
-      block-size: var(--size);
-      appearance: none;
-    }
-
     label {
-      block-size: var(--size);
-      display: inline-flex;
-      flex-flow: row nowrap;
-      align-items: center;
       background: url(/src/assets/naver/unchecked.svg) no-repeat;
-      padding-inline-start: calc(var(--size) + 4px);
+      padding-inline-start: calc(var(--size) + var(--gap));
     }
 
     input:checked + label {
       background-image: url(/src/assets/naver/checked.svg);
+    }
+  }
+
+  &.svg-icon {
+    label {
+      column-gap: var(--gap);
+    }
+
+    input:checked + label {
+      .area,
+      .border {
+        fill: var(--green-100);
+      }
+
+      .marker {
+        fill: var(--white);
+      }
     }
   }
 }
