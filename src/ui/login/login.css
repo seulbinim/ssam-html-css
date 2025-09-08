@@ -228,9 +228,10 @@ body > a:nth-of-type(1) {
         }
 
         .switch {
-          inline-size: 2.5em;
+          inline-size: 2em;
           display: flex;
           justify-content: end;
+          margin-inline-start: 0.5em;
         }
       }
     }
