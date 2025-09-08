@@ -49,3 +49,36 @@ body {
     background: var(--green-300);
   }
 }
+
+/* 체크박스 컴포넌트 */
+/* 체크박스 - 배경이미지 */
+.checkbox {
+  --size: 24px;
+
+  &.bg-icon {
+    position: relative;
+
+    input {
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      margin: 0;
+      inline-size: var(--size);
+      block-size: var(--size);
+      appearance: none;
+    }
+
+    label {
+      block-size: var(--size);
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      background: url(/src/assets/naver/unchecked.svg) no-repeat;
+      padding-inline-start: calc(var(--size) + 4px);
+    }
+
+    input:checked + label {
+      background-image: url(/src/assets/naver/checked.svg);
+    }
+  }
+}
