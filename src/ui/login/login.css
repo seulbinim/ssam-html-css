@@ -29,4 +29,23 @@ body {
 
 /* 버튼 컴포넌트 */
 .button {
+  border: 0 none;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  padding: 1rem;
+
+  &.button-fill {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+
+  &:disabled {
+    background: var(--gray-200);
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus,
+  &:not(:disabled):active {
+    background: var(--green-300);
+  }
 }
