@@ -57,6 +57,7 @@ body {
 
   &.bg-icon {
     position: relative;
+    display: inline-flex;
 
     input {
       position: absolute;
