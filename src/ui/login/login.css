@@ -17,8 +17,11 @@
   --active-color: var(--blue-100);
 }
 
-body {
-  margin: 20px;
+/* Index로 이동 */
+body > a:nth-of-type(1) {
+  position: fixed;
+  inset-inline-start: 20px;
+  inset-block-start: 20px;
 }
 
 /* 로고 컴포넌트 */
@@ -156,12 +159,107 @@ body {
 
   .error-message {
     color: var(--red-100);
-    font-size: 0.625rem;
-    background: pink;
+    font-size: 0.75rem;
     visibility: hidden;
   }
 
   input:user-invalid + .error-message {
     visibility: visible;
+  }
+}
+
+/* 레이아웃 */
+/* 헤더 (로고) */
+.header {
+  margin-block: 70px 45px;
+  text-align: center;
+
+  .logo {
+    vertical-align: top;
+  }
+
+  @media (width >=768px) {
+    margin-block: 100px 50px;
+  }
+}
+
+/* 로그인 폼 */
+.main {
+  padding: 0 15px;
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 10px;
+
+    @media (width >= 768px) {
+      inline-size: 460px;
+      margin-inline: auto;
+    }
+
+    .input,
+    .checkbox-wrapper,
+    .button {
+      inline-size: 100%;
+    }
+
+    .checkbox-wrapper {
+      order: 1;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: end;
+      align-items: center;
+
+      @media (width<768px) {
+        .checkbox {
+        }
+
+        .textlink-new,
+        .switch {
+          display: none;
+        }
+      }
+
+      @media (width >= 768px) {
+        justify-content: start;
+
+        .checkbox {
+          margin-inline-end: auto;
+        }
+
+        .switch {
+          inline-size: 2.5em;
+          display: flex;
+          justify-content: end;
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      block-size: 56px;
+    }
+
+    /* 상태 디자인 */
+    :focus {
+      outline: 0 none;
+    }
+
+    .input input:focus-visible {
+      border: 1px solid var(--green-100);
+      background: var(--blue-100);
+    }
+
+    .button:focus-visible {
+      box-shadow: 0 0 1px 2px #f00;
+    }
+
+    .checkbox-wrapper *:focus-visible {
+      outline: 2px solid var(--green-100);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
   }
 }
