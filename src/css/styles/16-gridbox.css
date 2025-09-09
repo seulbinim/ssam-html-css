@@ -42,12 +42,29 @@ body {
 
 /* 열과 행의 크기를 - px, rem, percentage, fraction (Mix) */
 .lion {
+  border: 1px solid red;
   background: aqua;
   inline-size: 500px;
-  block-size: 200px;
+  block-size: 300px;
   display: grid;
-  grid-template-columns: 50px 6.25rem 15% 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 50px 100px 50px 100px;
+  grid-template-rows: repeat(4, 50px);
+  /* justify-content: center;
+  align-content: center; */
+  place-content: center;
+  /* justify-items: center;
+  align-items: center; */
+  place-items: center;
+
+  > div:nth-child(odd) {
+    order: 1;
+  }
+
+  .lion1 {
+    /* justify-self: end;
+    align-self: end; */
+    place-self: center;
+  }
 }
 
 /* 열과 행의 크기를 - repeat() 함수 활용 */
