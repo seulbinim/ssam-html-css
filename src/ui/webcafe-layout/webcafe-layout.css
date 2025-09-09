@@ -35,72 +35,117 @@
   }
 }
 
-/* 컨테이너 */
+/* 그리드 레이아웃 */
 .container {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-}
+  display: grid;
+  grid-template-columns: [full-start] 20px [content-start] 1fr [content-end] 20px [full-end];
+  grid-template-rows: 100px repeat(5, 1fr) 100px;
 
-/* 헤더 & 메인콘텐츠 & 푸터 */
-.header,
-.main,
-.footer {
-  max-inline-size: 1200px;
-  inline-size: 100%;
-  /* inline-size: minmax(100%, 1200px); */
-}
-
-/* 헤더 & 푸터 */
-.header,
-.footer {
-  block-size: 100px;
-  flex: 0 1 auto;
-}
-
-/* 헤더 */
-.header {
-}
-
-/* 메인 콘텐츠 */
-
-.main {
-  flex: 1 1 0;
-  display: flex;
-  flex-flow: row wrap;
-
+  .header,
   .book,
   .news,
   .board,
   .favorite,
-  .twitter {
-    inline-size: 100%;
+  .twitter,
+  .footer {
+    grid-column: content;
+  }
+
+  .main {
+    display: contents;
   }
 
   @media (width>=960px) {
+    grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(62px, 1fr)) [content-end] 1fr [full-end];
+    grid-auto-rows: auto;
+    gap: 16px;
+
     .book {
-      inline-size: 35%;
+      grid-column: content-start / span 4;
     }
 
     .news {
-      inline-size: 65%;
+      grid-column: span 8;
     }
 
     .board {
-      inline-size: 35%;
-    }
-
-    .favorite {
-      inline-size: 20%;
-      order: 1;
+      grid-column: content-start / span 4;
     }
 
     .twitter {
-      inline-size: 45%;
+      grid-column: span 6;
+    }
+
+    .favorite {
+      grid-column: span 2;
+      order: 1;
+    }
+
+    .footer {
+      order: 1;
     }
   }
 }
 
-/* 푸터 */
-.footer {
-}
+/* 플렉스 레이아웃 */
+/* .container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .header,
+  .main,
+  .footer {
+    max-inline-size: 1200px;
+    inline-size: 100%;
+  }
+
+  .header,
+  .footer {
+    block-size: 100px;
+    flex: 0 1 auto;
+  }
+
+  .header {
+  }
+
+  .main {
+    flex: 1 1 0;
+    display: flex;
+    flex-flow: row wrap;
+
+    .book,
+    .news,
+    .board,
+    .favorite,
+    .twitter {
+      inline-size: 100%;
+    }
+
+    @media (width>=960px) {
+      .book {
+        inline-size: 35%;
+      }
+
+      .news {
+        inline-size: 65%;
+      }
+
+      .board {
+        inline-size: 35%;
+      }
+
+      .favorite {
+        inline-size: 20%;
+        order: 1;
+      }
+
+      .twitter {
+        inline-size: 45%;
+      }
+    }
+  }
+
+  .footer {
+  }
+} */
