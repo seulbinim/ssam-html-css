@@ -53,13 +53,56 @@
 }
 
 /* 메인 콘텐츠 */
+
 .main {
   flex: 1 1 0;
   display: flex;
   flex-flow: row wrap;
 
-  > div {
+  .book,
+  .news,
+  .board,
+  .favorite,
+  .twitter {
     inline-size: 100%;
+  }
+
+  @media (width>=960px) {
+    column-gap: 20px;
+
+    .main-wrapper-1,
+    .main-wrapper-2 {
+      display: flex;
+      flex-flow: row nowrap;
+      inline-size: 100%;
+      gap: 20px;
+    }
+
+    .book {
+      /* inline-size: 35%; */
+      flex: 3 1 0;
+    }
+
+    .news {
+      /* inline-size: 65%; */
+      flex: 7 1 0;
+    }
+
+    .board {
+      /* inline-size: 35%; */
+      flex: 3 1 0;
+    }
+
+    .favorite {
+      /* inline-size: 20%; */
+      order: 1;
+      flex: 5 1 0;
+    }
+
+    .twitter {
+      flex: 2 1 0;
+      /* inline-size: 45%; */
+    }
   }
 }
 
