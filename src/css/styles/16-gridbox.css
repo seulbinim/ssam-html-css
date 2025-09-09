@@ -1,0 +1,70 @@
+body {
+  margin: 20px;
+}
+
+/* 그리드 셀 배경 색상 */
+.like,
+.lion,
+.euid,
+.frontend {
+  > div:nth-child(1) {
+    background: var(--pink);
+  }
+  > div:nth-child(2) {
+    background: var(--blue);
+  }
+  > div:nth-child(3) {
+    background: var(--coral);
+  }
+  > div:nth-child(4) {
+    background: var(--green);
+  }
+  > div:nth-child(5) {
+    background: var(--purple);
+  }
+  > div:nth-child(6) {
+    background: var(--gray);
+  }
+  > div:nth-child(7) {
+    background: var(--apricot);
+  }
+}
+
+/* 열과 행의 크기를 - percentage */
+.like {
+  background: yellow;
+  inline-size: 500px;
+  block-size: 200px;
+  display: grid;
+  grid-template-columns: 25% 25% 50% 50%;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+/* 열과 행의 크기를 - px, rem, percentage, fraction (Mix) */
+.lion {
+  background: aqua;
+  inline-size: 500px;
+  block-size: 200px;
+  display: grid;
+  grid-template-columns: 50px 6.25rem 15% 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/* 열과 행의 크기를 - repeat() 함수 활용 */
+.euid {
+  background: orange;
+  inline-size: 500px;
+  block-size: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.frontend {
+  background: orange;
+  inline-size: 500px;
+  block-size: 200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
