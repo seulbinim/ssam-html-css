@@ -1,3 +1,4 @@
+/* 배경 색상 */
 .container {
   background: silver;
   min-block-size: 100vh;
@@ -40,6 +41,8 @@
   display: grid;
   grid-template-columns: [full-start] 20px [content-start] 1fr [content-end] 20px [full-end];
   grid-template-rows: 100px repeat(5, 1fr) 100px;
+  /* 그리드 아이템 가운데 정렬 */
+  justify-content: center;
 
   .header,
   .book,
@@ -56,7 +59,10 @@
   }
 
   @media (width>=960px) {
-    grid-template-columns: [full-start] 1fr [content-start] repeat(12, minmax(62px, 1fr)) [content-end] 1fr [full-end];
+    /* 14개의 컬럼을 마치 12개의 컬럼처럼 설계 */
+    /* 첫 번째 컬럼과 마지막 컬럼의 크기를 4px로 설정하면 16px의 Gap을 포함해 양쪽이 20px 여백이 있는 것처럼 표현할 수 있음 */
+    /* 첫 번째와 마지막 컬럼을 제와한 내부 12개의 컬럼의 최소 크기는 62px, 최대 크기는 82px로 설정하면 컨테이너의 최소 크기는 960px 최대 크기는 1200px이 됨 */
+    grid-template-columns: [full-start] 4px [content-start] repeat(12, minmax(62px, 82px)) [content-end] 4px [full-end];
     grid-auto-rows: auto;
     gap: 16px;
 
