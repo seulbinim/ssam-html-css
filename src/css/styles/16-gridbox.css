@@ -51,6 +51,7 @@ body {
 }
 
 /* 열과 행의 크기를 - repeat() 함수 활용 */
+/* 그리드 라인 기반 레이아웃 */
 .euid {
   background: orange;
   inline-size: 500px;
@@ -58,13 +59,81 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
+
+  .euid1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 3;
+    grid-column-end: 4;
+  }
+
+  .euid2 {
+    grid-row-start: 4;
+    grid-column-start: 4;
+  }
+
+  .euid3 {
+    grid-row-start: 1;
+    grid-column-start: 4;
+  }
+
+  .euid4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+
+  .euid5 {
+    grid-row: 3 / 5;
+    grid-column: 2 / 4;
+  }
+
+  .euid6 {
+    /* grid-row-start: 2;
+    grid-column-start: 4;
+    grid-row-end: 4;
+    grid-column-end: 5; */
+    /* grid-row: 2 / span 2 */
+    grid-area: 2 / 4 / 4 / 5;
+  }
+
+  .euid7 {
+    grid-area: 4 / 1;
+  }
 }
 
+/* 그리드 이름 기반 레이아웃 */
 .frontend {
-  background: orange;
-  inline-size: 500px;
+  /* background: silver; */
+  inline-size: 80%;
   block-size: 200px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: minmax(50px, 1fr) minmax(10rem, 1fr) minmax(15%, 1fr) minmax(100px, 1fr);
+  grid-template-rows: repeat(4, minmax(50px, 1fr));
+  grid-template-areas:
+    'box1 box1 box3 .'
+    'box1 box1 box6 box6'
+    'box4 box5 box5 box2'
+    'box7 box5 box5 box2';
+
+  .frontend1 {
+    grid-area: box1;
+  }
+  .frontend2 {
+    grid-area: box2;
+  }
+  .frontend3 {
+    grid-area: box3;
+  }
+  .frontend4 {
+    grid-area: box4;
+  }
+  .frontend5 {
+    grid-area: box5;
+  }
+  .frontend6 {
+    grid-area: box6;
+  }
+  .frontend7 {
+    grid-area: box7;
+  }
 }
