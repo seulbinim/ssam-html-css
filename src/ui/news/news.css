@@ -22,6 +22,7 @@ body {
   display: grid;
   grid-template-columns: 1fr max-content;
   grid-auto-rows: auto;
+  gap: 8px;
 
   .news-title,
   a,
@@ -38,6 +39,12 @@ body {
   .more {
     order: -1;
   } */
+
+  a:not(.more) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   .more {
     grid-area: 1 / 2;
