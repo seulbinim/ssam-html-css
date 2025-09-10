@@ -1,3 +1,46 @@
+:root {
+  --white: #fff;
+  --gray: #878787;
+  --gray-dark: #14182c;
+  --blue-100: #3030e0;
+  --blue-200: #24388d;
+  --blue-300: #111166;
+
+  --start-color: var(--blue-100);
+  --end-color: var(--blue-300);
+}
+
 body {
   margin: 20px;
+}
+
+/* 이디야 뉴스 */
+.news {
+  background: var(--blue-200);
+  color: var(--white);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-auto-rows: auto;
+
+  .news-title,
+  a,
+  time {
+    padding: 0.5em;
+  }
+
+  .news-list,
+  .news-item {
+    display: contents;
+  }
+
+  /* .news-title,
+  .more {
+    order: -1;
+  } */
+
+  .more {
+    grid-area: 1 / 2;
+    justify-self: end;
+  }
 }
