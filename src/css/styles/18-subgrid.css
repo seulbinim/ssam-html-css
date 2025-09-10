@@ -2,12 +2,12 @@ body {
   margin: 20px;
 }
 
-/* 카드 */
+/* 카드 컴포넌트 */
 .card {
   border: 1px solid currentColor;
   display: grid;
   grid-template-columns: minmax(200px, 1fr);
-  grid-template-rows: repeat(4, auto);
+  /* grid-template-rows: repeat(4, auto); */
   padding: 16px;
   gap: 16px;
 
@@ -34,5 +34,20 @@ body {
     justify-self: end;
     padding: 16px;
     border-radius: 4px;
+  }
+}
+
+/* 카드 레이아웃 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, auto);
+  gap: 16px;
+
+  .card {
+    grid-template-rows: subgrid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-row: span 4;
   }
 }
