@@ -1,0 +1,57 @@
+body {
+  margin: 20px;
+}
+
+/* CSS Mask */
+.like {
+  inline-size: 400px;
+  block-size: 200px;
+  background: red;
+  font-size: 72px;
+  font-weight: 900;
+  border: 20px solid blue;
+
+  /* mask-image: url(/src/assets/svg/star.svg);
+  mask-origin: content-box;
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+  mask-size: 50px 50px; */
+  mask: url(/src/assets/svg/star.svg) content-box no-repeat 20% 30% /50px 50px;
+}
+
+/* 배경 이미지 활용 */
+.lion {
+  --button-color: green;
+
+  background-color: transparent;
+  border: 0 none;
+  padding: 0;
+  inline-size: 50px;
+  block-size: 50px;
+
+  background-image: linear-gradient(to bottom, transparent 0% 45%, var(--button-color) 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0% 45%, var(--button-color) 45% 55%, transparent 55% 100%);
+}
+
+/* 마스크 이미지 활용 */
+.euid {
+  --button-color: green;
+
+  background-color: var(--button-color);
+  border: 0 none;
+  padding: 0;
+  inline-size: 50px;
+  block-size: 50px;
+
+  mask-image: linear-gradient(to bottom, transparent 0% 45%, #000 45% 55%, transparent 55% 100%), linear-gradient(to right, transparent 0% 45%, #000 45% 55%, transparent 55% 100%);
+}
+
+/* 배경 이미지와 마스크 이미지 활용 */
+.bootcamp {
+  border: 0 none;
+  padding: 0;
+  inline-size: 50px;
+  block-size: 50px;
+  background-color: transparent;
+  background-image: linear-gradient(red, orange, yellow, green, blue, darkblue, purple);
+  mask: url(/src/assets/svg/sun.svg) no-repeat 0 0 / cover;
+}
