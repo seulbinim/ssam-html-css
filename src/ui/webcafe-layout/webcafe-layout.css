@@ -65,6 +65,8 @@
     grid-template-columns: [full-start] 4px [content-start] repeat(12, minmax(62px, 82px)) [content-end] 4px [full-end];
     grid-auto-rows: auto;
     gap: 16px;
+    /* max-inline-size: 1200px;
+    margin-inline: auto; */
 
     .book {
       grid-column: content-start / span 4;
