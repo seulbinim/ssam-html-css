@@ -20,7 +20,7 @@ body {
   color: var(--white);
   padding: 1em;
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: minmax(200px, 1fr) max-content;
   grid-auto-rows: auto;
   gap: 8px;
 
