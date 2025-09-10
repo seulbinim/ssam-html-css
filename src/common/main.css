@@ -1,1 +1,57 @@
-/* 메인 페이지 스타일 */
+body {
+  background-color: #778899;
+  margin: 20px;
+}
+
+.bootcamp {
+  color: #121212;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+
+  h1 {
+    inline-size: 100%;
+    color: #fff;
+    margin-block: 2rem;
+
+    &::before {
+      content: '🎁';
+      margin-inline-end: 0.5rem;
+    }
+
+    strong {
+      font-size: 16px;
+    }
+  }
+
+  .html,
+  .css,
+  .ui {
+    background-color: #d3d3d3;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-inline-size: 280px;
+    flex: 1 1 0;
+
+    h2 {
+      margin-block: 1rem;
+      font-size: 1.8rem;
+
+      &::before {
+        content: '💜';
+        margin-inline-end: 0.5rem;
+      }
+    }
+
+    ul {
+      columns: 2;
+      column-rule: 1px solid currentColor;
+      column-gap: 4rem;
+      list-style-type: none;
+    }
+
+    li {
+      margin-block: 0.5rem;
+    }
+  }
+}
