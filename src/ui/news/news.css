@@ -51,3 +51,8 @@ body {
     justify-self: end;
   }
 }
+
+/* 이디야 공지사항 */
+.notice {
+  background: yellow;
+}
