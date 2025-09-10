@@ -54,5 +54,53 @@ body {
 
 /* 이디야 공지사항 */
 .notice {
-  background: yellow;
+  display: grid;
+  grid-template-columns: 125px minmax(150px, 1fr);
+  border: 1px solid var(--gray-dark);
+
+  .notice-title,
+  .notice-buttons {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .notice-title {
+    padding: 16px 0 16px 16px;
+    background: radial-gradient(circle at left top, var(--start-color), var(--end-color));
+    color: var(--white);
+    font-size: 20px;
+  }
+
+  .notice-content {
+    background: var(--white);
+    padding: 16px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    time {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    p {
+      margin-block-start: 16px;
+    }
+  }
+
+  .notice-buttons {
+    /* justify-self: end;
+    align-self: end; */
+    place-self: end;
+    margin: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+
+    button {
+      border: 0 none;
+      background: transparent;
+      padding: 0;
+    }
+  }
 }
