@@ -1,3 +1,14 @@
+:root {
+  --white: #fff;
+  --gray: #878787;
+  --gray-dark: #14182c;
+  --blue-100: #3030e0;
+  --blue-200: #24388d;
+  --blue-300: #111166;
+
+  --start-color: var(--blue-100);
+  --end-color: var(--blue-300);
+}
 /* 배경 색상 */
 .container {
   background: silver;
@@ -157,3 +168,41 @@
   .footer {
   }
 } */
+
+/* 이디야 뉴스 */
+.ediya-news {
+  background: var(--blue-200);
+  color: var(--white);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) max-content;
+  grid-auto-rows: auto;
+  gap: 8px;
+
+  .ediya-news-title,
+  a,
+  time {
+    padding: 0.5em;
+  }
+
+  .ediya-news-list,
+  .ediya-news-item {
+    display: contents;
+  }
+
+  /* .news-title,
+  .more {
+    order: -1;
+  } */
+
+  a:not(.ediya-news-more) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ediya-news-more {
+    grid-area: 1 / 2;
+    justify-self: end;
+  }
+}
