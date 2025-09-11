@@ -9,8 +9,14 @@ h1,
 
 .post {
   box-shadow: 0 0 0 5px currentColor;
-  container-type: inline-size;
+  container: euid / inline-size;
+  /* container-type: inline-size;
+  container-name: euid; */
   /* inline-size: 300px; */
+}
+
+.bootcamp {
+  inline-size: 400px;
 }
 
 .card {
@@ -21,11 +27,22 @@ h1,
     color: red;
   }
 
-  @container (width>=480px) {
+  @container euid (width>=600px) {
     background: #fcf;
 
     h2 {
       color: green;
     }
+  }
+}
+
+/* 레이아웃 */
+.wrapper {
+  box-shadow: 0 0 0 5px currentColor;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  .cell {
+    container-type: inline-size;
   }
 }
