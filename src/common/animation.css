@@ -1,4 +1,24 @@
 /* 애니메이션 관련 CSS */
+/* Shrink 애니메이션 */
+@keyframes shrink {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0.5;
+  }
+}
+
+/* fade 애니메이션 */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Move 애니메이션 */
 @keyframes move {
   0% {
