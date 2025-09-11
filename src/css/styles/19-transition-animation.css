@@ -1,3 +1,98 @@
 body {
   margin: 20px;
 }
+
+/* transition - :hover */
+.euid {
+  padding: 16px;
+  border: 1px solid currentColor;
+  inline-size: 500px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+
+  span {
+    background: lightgreen;
+    padding: 10px;
+    transition-property: background;
+    transition-duration: 2000ms;
+
+    &:hover {
+      background: pink;
+    }
+  }
+}
+
+/* container 공통 */
+.container {
+  padding: 16px;
+  border: 1px solid currentColor;
+
+  > div {
+    inline-size: 80px;
+    block-size: 80px;
+    background: yellow;
+    text-align: center;
+    align-content: center;
+  }
+}
+
+/* translate - 이동 */
+.like {
+  .translate {
+    transition-property: translate;
+    transition-duration: 1000ms;
+
+    &.active {
+      /* transform: translate(100px, 0); */
+      translate: 100px 0;
+    }
+  }
+}
+
+/* skew - 기울이기 */
+.lion {
+  .skew {
+    transition-property: transform;
+    transition-duration: 1000ms;
+
+    &.active {
+      transform: skew(-15deg, 5deg) translateX(100px);
+    }
+  }
+}
+
+/* rotate - 회전하기 */
+.bootcamp {
+  .rotate {
+    /* transition-property: translate, rotate, background;
+    transition-duration: 1000ms, 500ms, 500ms;
+    transition-timing-function: ease-in-out, linear, ease;
+    transition-delay: 0ms, 1000ms, 1500ms; */
+    transition:
+      translate 1000ms ease-in-out 0ms,
+      rotate 500ms linear 1000ms,
+      background 500ms ease 1500ms;
+    border-radius: 50%;
+
+    &.active {
+      /* transform: rotate(45deg) translateX(100px); */
+      rotate: 1turn;
+      translate: 100px 0;
+      background: pink;
+    }
+  }
+}
+
+/* scale - 크기 변경 */
+.frontend {
+  .scale {
+    transition: scale 1000ms;
+    transform-origin: 0 0;
+
+    &.active {
+      /* transform: scale(2, 1); */
+      scale: 2 1;
+    }
+  }
+}
