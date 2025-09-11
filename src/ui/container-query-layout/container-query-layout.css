@@ -1,5 +1,5 @@
-.cell {
-  container-type: inline-size;
+body {
+  margin: 20px;
 }
 
 .card {
@@ -34,5 +34,33 @@
     p {
       flex: 1 1 0;
     }
+  }
+}
+
+/* bootcamp */
+.bootcamp {
+  display: flex;
+  flex-flow: column nowrap;
+  /* gap: 16px; */
+
+  @media (width>=600px) {
+    flex-flow: row wrap;
+
+    .cell {
+      inline-size: 50%;
+      container-type: inline-size;
+    }
+  }
+}
+
+/* likelion */
+.likelion {
+  display: flow-root;
+  container-type: inline-size;
+
+  .card {
+    float: inline-start;
+    inline-size: 70%;
+    margin-inline-end: 16px;
   }
 }
