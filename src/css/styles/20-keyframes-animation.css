@@ -15,50 +15,6 @@ body {
   }
 }
 
-.fade,
-.shrink,
-.bounce,
-.shake {
-  order: -1;
-}
-
-/* Shake 효과 */
-.shake {
-  .target-animation {
-    animation: shake 200ms infinite alternate ease-in-out;
-  }
-}
-
-/* Bounce 효과 */
-.bounce {
-  .target-animation {
-    animation: bounce 200ms infinite alternate ease-in-out;
-  }
-}
-
-/* Shrink 효과 */
-.shrink {
-  .target-animation {
-    transform-origin: 0 0;
-    animation: shrink 3s infinite alternate ease-in-out;
-  }
-}
-
-/* fade 효과 */
-.fade {
-  .target-animation {
-    /* animation-name: fade;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-delay: 3s;
-    animation-play-state: paused;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards; */
-    animation: fade 5s infinite alternate 3s paused ease-in-out forwards;
-  }
-}
-
 /* 모든 .target-animation에 animation-play-state: paused;를 기본으로 설정 */
 .case {
   border: 1px solid light-dark(#000, #fff);
@@ -98,6 +54,66 @@ body {
     padding: 0.625rem;
     border-radius: 0.5rem;
     background: linear-gradient(135deg, #37b24d, #2b8a3e);
+  }
+}
+
+.fade,
+.shrink,
+.bounce,
+.shake,
+.spin {
+  order: -1;
+}
+
+/* Spin 효과 */
+.spin {
+  .target-animation {
+    width: 120px;
+    aspect-ratio: 1;
+    background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, purple 75% 100%);
+    border-radius: 50%;
+    animation: spin 200ms infinite alternate ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* Shake 효과 */
+.shake {
+  .target-animation {
+    animation: shake 200ms infinite alternate ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* Bounce 효과 */
+.bounce {
+  .target-animation {
+    animation: bounce 200ms infinite alternate ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* Shrink 효과 */
+.shrink {
+  .target-animation {
+    transform-origin: 0 0;
+    animation: shrink 3s infinite alternate ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* fade 효과 */
+.fade {
+  .target-animation {
+    /* animation-name: fade;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-play-state: paused;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards; */
+    animation: fade 5s infinite alternate 3s ease-in-out forwards;
     animation-play-state: paused;
   }
 }
