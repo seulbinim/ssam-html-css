@@ -16,8 +16,24 @@ body {
 }
 
 .fade,
-.shrink {
+.shrink,
+.bounce,
+.shake {
   order: -1;
+}
+
+/* Shake 효과 */
+.shake {
+  .target-animation {
+    animation: shake 200ms infinite alternate ease-in-out;
+  }
+}
+
+/* Bounce 효과 */
+.bounce {
+  .target-animation {
+    animation: bounce 200ms infinite alternate ease-in-out;
+  }
 }
 
 /* Shrink 효과 */

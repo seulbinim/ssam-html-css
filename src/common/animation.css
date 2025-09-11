@@ -1,4 +1,33 @@
 /* 애니메이션 관련 CSS */
+/* Bounce 애니메이션 */
+@keyframes bounce {
+  /* 0%{margin: 0;}
+  100%{ margin-top: -20px;} */
+
+  /* 0%{ position: relative; top: 0}
+  100%{ position: relative; top: -20px} */
+
+  /* 0%{ transform: translateY(0)}
+  100%{ transform: translateY(-20px);} */
+
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 0 -20px;
+  }
+}
+
+/* Shake 애니메이션 */
+@keyframes shake {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: -20px 0;
+  }
+}
+
 /* Shrink 애니메이션 */
 @keyframes shrink {
   0% {
