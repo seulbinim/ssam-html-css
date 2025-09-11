@@ -1,3 +1,38 @@
+@layer module, state;
+
 body {
   margin: 20px;
+}
+
+.alert {
+  background: darkgreen;
+}
+
+.alert,
+p {
+  padding: 16px;
+}
+
+@layer {
+  .alert {
+    background: purple;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: darkblue;
+    color: white;
+  }
+}
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+    padding: 50px;
+  }
 }
