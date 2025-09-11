@@ -1,1 +1,12 @@
 /* 애니메이션 관련 CSS */
+/* Move 애니메이션 */
+@keyframes move {
+  0% {
+    /* margin-inline-start: 0; */
+    translate: 0 0;
+  }
+  100% {
+    /* margin-inline-start: 100px; */
+    translate: 100px 0;
+  }
+}

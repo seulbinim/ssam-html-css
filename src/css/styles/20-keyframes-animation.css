@@ -1,3 +1,57 @@
 body {
   margin: 20px;
 }
+
+/* 공통 스타일 (.container 및 .case) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-auto-rows: 18.75rem;
+  gap: 1.25rem;
+  color: #fff;
+
+  hr {
+    display: none;
+  }
+}
+
+.case {
+  border: 1px solid light-dark(#000, #fff);
+  padding: 2.5rem;
+
+  strong {
+    color: #37b24d;
+    display: block;
+    font-size: 20px;
+    margin-block-end: 10px;
+  }
+
+  button {
+    border-radius: 0.5rem;
+    padding: 0.5em 1em;
+    color: #fff;
+  }
+
+  .toggle-animation {
+    background-color: #4263eb;
+  }
+
+  .toggle-animation.paused {
+    background-color: #e03131;
+  }
+
+  .reset-animation {
+    background-color: #15aabf;
+  }
+
+  .target-animation {
+    margin-top: 2.5rem;
+    margin-block-start: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    align-content: center;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(135deg, #37b24d, #2b8a3e);
+  }
+}
