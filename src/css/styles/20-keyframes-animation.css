@@ -61,8 +61,66 @@ body {
 .shrink,
 .bounce,
 .shake,
-.spin {
+.spin,
+.pulse,
+.flip,
+.wobble,
+.rotate {
   order: -1;
+}
+
+/* CSS 변수를 활용한 애니메이션 */
+
+.rotate .target-animation {
+  --rotation: 0deg;
+
+  inline-size: 120px;
+  aspect-ratio: 1;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    background: conic-gradient(from var(--rotation), red 0 30%, transparent 30% 100%);
+    z-index: -1;
+    padding: 5px;
+    inline-size: 100%;
+    block-size: 100%;
+    box-sizing: content-box;
+    translate: -50% -50%;
+    border-radius: 0.5rem;
+    animation: rotate 500ms infinite linear;
+    animation-play-state: paused;
+  }
+
+  &::before {
+    filter: blur(10px);
+  }
+}
+
+/* Wobble 애니메이션 */
+.wobble .target-animation {
+  animation: wobble 1s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+/* Flip 애니메이션 */
+.flip {
+  perspective: 500px;
+
+  .target-animation {
+    animation: flip 1s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* Pulse 애니메이션 */
+.pulse .target-animation {
+  animation: pulse 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
 }
 
 /* Spin 효과 */
@@ -72,7 +130,7 @@ body {
     aspect-ratio: 1;
     background: conic-gradient(red 0% 25%, green 25% 50%, blue 50% 75%, purple 75% 100%);
     border-radius: 50%;
-    animation: spin 200ms infinite alternate ease-in-out;
+    animation: spin 500ms infinite linear;
     animation-play-state: paused;
   }
 }
