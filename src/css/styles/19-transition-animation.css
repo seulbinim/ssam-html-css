@@ -2,14 +2,24 @@ body {
   margin: 20px;
 }
 
+/* 그리드 레이아웃 */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: row;
+  gap: 16px;
+}
+
 /* transition - :hover */
 .euid {
   padding: 16px;
   border: 1px solid currentColor;
-  inline-size: 500px;
   display: flex;
   flex-flow: row nowrap;
+  align-items: start;
   gap: 10px;
+  grid-column: 1 / -1;
 
   span {
     background: lightgreen;
