@@ -15,77 +15,135 @@
   <body>
     <a href="/index.html">Index로 이동</a>
     <h1>Container Query 레이아웃</h1>
-    <div class="bootcamp">
-      <div class="cell">
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <div class="cards">
+      <div class="card-wrapper">
         <div class="card">
-          <h2>카드 제목</h2>
-          <figure>
-            <img src="/src/assets/masonry/dog-01.jpg" alt="" />
-            <figcaption>Unsplash</figcaption>
+          <figure class="card__image">
+            <img src="/src/assets/container-query/book.jpg" alt="" width="1080" height="720" />
+            <figcaption>
+              <a class="card__link" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/mIVpbn8j-6w" target="_blank">Unsplash - Book</a>
+            </figcaption>
           </figure>
-          <p>
-            AI 코딩 도구를 활용하면 코드 생성 및 자동화, 개발 워크플로우와의 통합 등이 가능하며 기존 개발 환경 대비 생산성을 높일 수 있습니다. 그러나 개발자를 꿈꾸며 학습을하는 예비 개발자에게 AI 코딩 도구는 양날의 검이 될 수 있습니다. AI 코딩 도구에만 의존하는 주니어 개발자는 경쟁력을 갖출 수 없기
-            때문입니다. 오히려 더 깊이 있게 언어를 학습하고 좋은 질문을 할 수 있도록 문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는 것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
-          </p>
+          <div class="card__description">
+            <p>
+              컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에
+              스타일을 적용하는 미디어 쿼리 의 대안입니다.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="cell">
+      <div class="card-wrapper">
         <div class="card">
-          <h2>카드 제목</h2>
-          <figure>
-            <img src="/src/assets/masonry/cat-01.jpg" alt="" />
-            <figcaption>Unsplash</figcaption>
+          <figure class="card__image">
+            <img src="/src/assets/container-query/coffee.jpg" alt="" width="1080" height="720" />
+            <figcaption>
+              <a class="card__link" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/tNALoIZhqVM" target="_blank">Unsplash - Coffee</a>
+            </figcaption>
           </figure>
-          <p>
-            AI 코딩 도구를 활용하면 코드 생성 및 자동화, 개발 워크플로우와의 통합 등이 가능하며 기존 개발 환경 대비 생산성을 높일 수 있습니다. 그러나 개발자를 꿈꾸며 학습을하는 예비 개발자에게 AI 코딩 도구는 양날의 검이 될 수 있습니다. AI 코딩 도구에만 의존하는 주니어 개발자는 경쟁력을 갖출 수 없기
-            때문입니다. 오히려 더 깊이 있게 언어를 학습하고 좋은 질문을 할 수 있도록 문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는 것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
-          </p>
+          <div class="card__description">
+            <p>
+              컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에
+              스타일을 적용하는 미디어 쿼리 의 대안입니다.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="cell">
+      <div class="card-wrapper">
         <div class="card">
-          <h2>카드 제목</h2>
-          <figure>
-            <img src="/src/assets/masonry/cat-01.jpg" alt="" />
-            <figcaption>Unsplash</figcaption>
-          </figure>
-          <p>
-            AI 코딩 도구를 활용하면 코드 생성 및 자동화, 개발 워크플로우와의 통합 등이 가능하며 기존 개발 환경 대비 생산성을 높일 수 있습니다. 그러나 개발자를 꿈꾸며 학습을하는 예비 개발자에게 AI 코딩 도구는 양날의 검이 될 수 있습니다. AI 코딩 도구에만 의존하는 주니어 개발자는 경쟁력을 갖출 수 없기
-            때문입니다. 오히려 더 깊이 있게 언어를 학습하고 좋은 질문을 할 수 있도록 문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는 것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
-          </p>
+          <div class="card__image">
+            <img src="/src/assets/container-query/burger.jpg" alt="" width="1080" height="720" />
+            <a class="card__link" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/PxJ9zkM2wdA">Unsplash - Burger</a>
+          </div>
+          <div class="card__description">
+            <p>
+              컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에
+              스타일을 적용하는 미디어 쿼리 의 대안입니다.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="cell">
+      <div class="card-wrapper">
         <div class="card">
-          <h2>카드 제목</h2>
-          <figure>
-            <img src="/src/assets/masonry/cat-01.jpg" alt="" />
-            <figcaption>Unsplash</figcaption>
-          </figure>
-          <p>
-            AI 코딩 도구를 활용하면 코드 생성 및 자동화, 개발 워크플로우와의 통합 등이 가능하며 기존 개발 환경 대비 생산성을 높일 수 있습니다. 그러나 개발자를 꿈꾸며 학습을하는 예비 개발자에게 AI 코딩 도구는 양날의 검이 될 수 있습니다. AI 코딩 도구에만 의존하는 주니어 개발자는 경쟁력을 갖출 수 없기
-            때문입니다. 오히려 더 깊이 있게 언어를 학습하고 좋은 질문을 할 수 있도록 문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는 것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
-          </p>
+          <div class="card__image">
+            <img src="/src/assets/container-query/camera.jpg" alt="" width="1080" height="720" />
+            <a class="card__link" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/HDIUUSO5C8g">Unsplash - Camera</a>
+          </div>
+          <div class="card__description">
+            <p>
+              컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에
+              스타일을 적용하는 미디어 쿼리 의 대안입니다.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <hr />
-    <div class="likelion">
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <div class="card-wrapper">
       <div class="card">
-        <h2>카드 제목</h2>
-        <figure>
-          <img src="/src/assets/masonry/unsplash-12.jpg" alt="" />
-          <figcaption>Unsplash</figcaption>
+        <figure class="card__image">
+          <img src="/src/assets/container-query/book.jpg" alt="" width="1080" height="720" />
+          <figcaption>
+            <a class="card__link" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/mIVpbn8j-6w" target="_blank">Unsplash - Book</a>
+          </figcaption>
         </figure>
-        <p>
-          AI 코딩 도구를 활용하면 코드 생성 및 자동화, 개발 워크플로우와의 통합 등이 가능하며 기존 개발 환경 대비 생산성을 높일 수 있습니다. 그러나 개발자를 꿈꾸며 학습을하는 예비 개발자에게 AI 코딩 도구는 양날의 검이 될 수 있습니다. AI 코딩 도구에만 의존하는 주니어 개발자는 경쟁력을 갖출 수 없기
-          때문입니다. 오히려 더 깊이 있게 언어를 학습하고 좋은 질문을 할 수 있도록 문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는 것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
-        </p>
+        <div class="card__description">
+          <p>
+            컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에
+            스타일을 적용하는 미디어 쿼리 의 대안입니다.
+          </p>
+        </div>
       </div>
-      <p>
-        AI 코딩 도구를 활용하면 코드 생성 및 자동화, 개발 워크플로우와의 통합 등이 가능하며 기존 개발 환경 대비 생산성을 높일 수 있습니다. 그러나 개발자를 꿈꾸며 학습을하는 예비 개발자에게 AI 코딩 도구는 양날의 검이 될 수 있습니다. AI 코딩 도구에만 의존하는 주니어 개발자는 경쟁력을 갖출 수 없기
-        때문입니다. 오히려 더 깊이 있게 언어를 학습하고 좋은 질문을 할 수 있도록 문해력(Literacy)을 기르는 것이 필요합니다. 다만 AI 도구를 완전히 배제하는 것이 아닌 학습을 위한 파트너로서 활용할 것을 추천합니다.
-      </p>
     </div>
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <div class="inset">
+      <div class="card-wrapper">
+        <div class="card">
+          <div class="card__image">
+            <img src="/src/assets/container-query/camera.jpg" alt="" width="1080" height="720" />
+            <a class="card__link" href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/HDIUUSO5C8g">Unsplash - Camera</a>
+          </div>
+          <div class="card__description">
+            <p>
+              컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에
+              스타일을 적용하는 미디어 쿼리 의 대안입니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변 컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을
+      적용하는 미디어 쿼리 의 대안입니다.
+    </p>
   </body>
 </html>
